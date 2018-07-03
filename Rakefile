@@ -47,8 +47,11 @@ task :default do
   step 'symlink'
   link_file 'vim'                   , '~/.vim'
   link_file 'vimrc'                 , '~/.vimrc'
+  link_file 'vimrc.local'           , '~/.vimrc.local'
   link_file 'vimrc.bundles'         , '~/.vimrc.bundles'
   link_file 'vimrc.bundles.local'   , '~/.vimrc.bundles.local'
+  link_file 'tmux.conf'             , '~/.tmux.conf'
+  link_file 'tmux.conf.local'       , '~/.tmux.conf.local'
   install_github_bundle 'gmarik','vundle'
   sh 'vim -c "BundleInstall" -c "q" -c "q"'
 end
